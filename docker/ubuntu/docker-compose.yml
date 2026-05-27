@@ -1,0 +1,12 @@
+services:
+  cs415-ubuntu:
+    build: ./docker/ubuntu
+    image: image_cs415_ubuntu
+    container_name: container_cs415_ubuntu
+    restart: always
+    stdin_open: true
+    tty: true
+
+  new_ubuntu_service:
+    build: ./new-service
+    container_name: ubuntu_myuser_container

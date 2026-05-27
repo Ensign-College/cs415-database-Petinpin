@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  # Seu container original ajustado para a pasta correta (./docker)
+  cs415-ubuntu:
+    build: ./docker
+    image: image_cs415_ubuntu
+    container_name: container_cs415_ubuntu
+    restart: always
+    stdin_open: true
+    tty: true
+
+  # O novo container apontando para a pasta ajustada (./new-service)
+  new_ubuntu_service:
+    build: ./new-service
+    container_name: ubuntu_myuser_container
+    
